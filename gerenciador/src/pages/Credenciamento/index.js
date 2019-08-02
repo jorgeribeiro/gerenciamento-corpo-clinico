@@ -1,8 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { ToastContainer, toast } from 'react-toastify';
-
-import Logo from "../../assets/doctor.svg";
 
 import { Form, Container } from "./styles";
 
@@ -12,12 +9,10 @@ const options = [
 ];
 
 class Credenciamento extends Component {
-  notify = () => toast("Wow so easy !");
   render() {
     return (
       <Container>
         <Form>
-          <img src={Logo} alt="logo" />          
           <input
             type="text"
             placeholder="Nome e sobrenome"
@@ -50,7 +45,7 @@ class Credenciamento extends Component {
             type="password"
             placeholder="Senha"
           />
-          <button type="submit">Finalizar credenciamento</button>
+          <button>Finalizar credenciamento</button>
           <hr />
           <Link to="/">Início</Link>
         </Form>
