@@ -1,23 +1,20 @@
-import React from 'react';
-import doctor from './assets/doctor.svg';
-import './App.css';
+import React, { Component, Fragment } from "react";
+import { ToastContainer } from 'react-toastify';
+import Routes from "./routes";
 
+import GlobalStyle from './styles/global';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={doctor} className="App-logo" alt="logo" />
-        <p>
-          Gerenciamento de Corpo Clínico
-        </p>
-        <input type="text" placeholder="Endereço de e-mail" />
-        <input type="password" placeholder="Senha" />
-        <button>Entrar</button>        
-        <button>Credenciamento</button>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render () {
+    return (
+      <Fragment>
+        <Routes />
+        <GlobalStyle />
+        <ToastContainer autoClose={3000} />
+      </Fragment>
+    )
+  }
 }
 
 export default App;
+
